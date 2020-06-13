@@ -1,6 +1,6 @@
 <h1> Deployment Of Machine Learning Models </h1>
 
-<p> Imagine You built  an Optimized Model and got an accuracy of x%. You stop the Process , Continue to next Model. But in Real Case Scenarios, Bringing Models into Production and Sharing Business insights is Important. </p>
+<p>Imagine You built  an Optimized Model and got an accuracy of x%. You stop the Process , Continue to next Model. But in Real Case Scenarios, Bringing Models into Production and Sharing Business insights is Important. </p>
 
 >Don''t Know How to Deploy?
 
