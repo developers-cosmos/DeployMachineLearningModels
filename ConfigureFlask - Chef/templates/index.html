@@ -1,0 +1,90 @@
+<html>
+<head>
+<title> Covid19 Feedback Application </title>
+</head>
+<style>
+    body{
+        background-image: url('../static/bg.jpeg');
+    }
+    img {
+      border-radius: 10px;
+    }
+    h1{
+        color:white;
+        font-family:Georgia;
+        font-size: 50px;
+    }
+    h3{
+        color:white;
+        font-family: 'Comic Sans Ms';
+        font-size: 18px;
+    }
+    p{
+        color:white;
+        font-family:'Comic Sans Ms';
+        font-size: 16px;
+        margin-left: 150px;
+    }
+
+    input[type=text] {
+    background-color:white;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    }
+button {
+  background-color:grey;
+  border-radius: 4px;
+  color: black;
+  padding: 8px 25px;
+  text-align: center;
+  display: inline-block;
+  font-size: 15px;
+}
+
+.container {
+  display: flex;
+}
+.container > div {
+  flex: 1; /*grow*/
+}
+</style>
+
+<body>
+<center>
+    <img src="../static/Developers Cosmos.png" alt="Hello from Olaf!" width="300" style="margin-right:1200 ;">     
+    <h1>Covid19 Feedback Application</h1>
+    <br><br>
+<div class="login container">
+    <div>
+        <br>
+        <form action="{{ url_for('State')}}"method="post">
+            <h3> Please Enter feedback for State Government</h3>
+            <input type="text" name="state" placeholder="state" required="required" />
+            
+            <button type="submit" class="btn btn-primary btn-block btn-large">Submit</button>
+        </form>
+        <br>
+        <form action="{{ url_for('Central')}}"method="post">
+                <h3> Please Enter feedback for Central Government</h3>
+                <input type="text" name="central" placeholder="central" required="required" />
+                
+                <button type="submit" class="btn btn-primary btn-block btn-large">Submit</button>
+        </form>
+        <br><br>
+        <p><b>RESULT:</b> {{ prediction_text }}</p>
+        
+    </div>
+    <div>
+        <img src="../static/tenor.gif" alt="Hello from Olaf!" width="400">
+    </div>
+
+ </div>
+</center>
+<br><br>
+<p style="font-size: 9px;text-align:left;">Note: This is not any official site.<br>Please, do not enter any confidential data.</p>
+<p style="font-size: 9px;text-align: right;">{{data_hn}}</p>
+<p style="font-size: 9px;text-align: right;">{{data_ip}}</p>
+    </body>
+</html>

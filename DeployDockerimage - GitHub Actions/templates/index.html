@@ -1,0 +1,28 @@
+<html>
+<head>
+<title> GitHub Actions</title>
+</head>
+<body style="background-color:whitesmoke;">
+    <center>
+
+<div class="login">
+    <br><br><br>
+	<h1 style="color: black;">Predict Profit Of a StartUp</h1><br>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+        <input type="text" name="R&D Spend" placeholder="R&D Spend" required="required" style="width: 200;"/><br><br>
+        <input type="text" name="Administration" placeholder="Administration" required="required" style="width: 200;"/><br><br>
+        <input type="text" name="Marketing Spend" placeholder="Marketing Spend" required="required" style="width: 200;" /><br><br>
+        <input type="text" name="State" placeholder="State" required="required" style="width: 200;" /> <br><br><br>
+        
+        <button type="submit" class="btn btn-primary btn-block btn-large" style="width: 100; height: 30;">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   <p style="color:black;"><b >PROFIT:</b> {{ prediction_text }}</p>
+
+ </div> </center>
+    </body>
+</html>
